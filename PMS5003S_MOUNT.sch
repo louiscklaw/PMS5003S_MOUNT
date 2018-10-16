@@ -1,4 +1,180 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+LIBS:PMS5003S_MOUNT-cache
+EELAYER 26 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 4100 2700 0    100  ~ 0
+PMS5003S interfacing
+$Comp
+L Connector_Generic:Conn_01x08 J2
+U 1 1 5BC61E03
+P 3650 1750
+F 0 "J2" H 3550 2300 50  0000 C CNN
+F 1 "CONN_PMS" H 3550 2200 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 3650 1750 50  0001 C CNN
+F 3 "~" H 3650 1750 50  0001 C CNN
+	1    3650 1750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x06 J1
+U 1 1 5BC61F03
+P 5950 1650
+F 0 "J1" H 6050 1650 50  0000 L CNN
+F 1 "CONN_MCU" H 6050 1550 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 5950 1650 50  0001 C CNN
+F 3 "~" H 5950 1650 50  0001 C CNN
+	1    5950 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L customized_power:+5V #PWR0101
+U 1 1 5BC61FAB
+P 4300 1000
+F 0 "#PWR0101" H 4300 850 50  0001 C CNN
+F 1 "+5V" H 4350 1200 50  0000 C CNN
+F 2 "" H 4300 1000 50  0001 C CNN
+F 3 "" H 4300 1000 50  0001 C CNN
+	1    4300 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 1450 4300 1450
+Wire Wire Line
+	4300 1450 4300 1000
+$Comp
+L power:GND #PWR0102
+U 1 1 5BC62184
+P 4500 1500
+F 0 "#PWR0102" H 4500 1250 50  0001 C CNN
+F 1 "GND" H 4500 1300 50  0000 C CNN
+F 2 "" H 4500 1500 50  0001 C CNN
+F 3 "" H 4500 1500 50  0001 C CNN
+	1    4500 1500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4500 1500 4500 1550
+Wire Wire Line
+	4500 1550 3850 1550
+Wire Wire Line
+	4500 1550 5750 1550
+Connection ~ 4500 1550
+$Comp
+L customized_power:+3V3 #PWR0103
+U 1 1 5BC62208
+P 4700 1000
+F 0 "#PWR0103" H 4700 850 50  0001 C CNN
+F 1 "+3V3" H 4750 1200 50  0000 C CNN
+F 2 "" H 4700 1000 50  0001 C CNN
+F 3 "" H 4700 1000 50  0001 C CNN
+	1    4700 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L taobao-r:R103 R1
+U 1 1 5BC6238C
+P 4700 1400
+F 0 "R1" H 4800 1450 50  0000 L CNN
+F 1 "R103" H 4800 1400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4700 1400 50  0001 C CNN
+F 3 "~" H 4700 1400 50  0001 C CNN
+	1    4700 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 1000 4700 1250
+Wire Wire Line
+	4700 1250 5100 1250
+Wire Wire Line
+	5100 1250 5100 1450
+Wire Wire Line
+	5100 1450 5750 1450
+Connection ~ 4700 1250
+Wire Wire Line
+	4700 1250 4700 1300
+Wire Wire Line
+	4700 1500 4700 1650
+Wire Wire Line
+	4700 1650 5750 1650
+Wire Wire Line
+	3850 1650 4700 1650
+Connection ~ 4700 1650
+Wire Wire Line
+	3850 1750 5750 1750
+Wire Wire Line
+	3850 1850 5750 1850
+$Comp
+L customized_power:+3V3 #PWR0104
+U 1 1 5BC627CA
+P 5100 2250
+F 0 "#PWR0104" H 5100 2100 50  0001 C CNN
+F 1 "+3V3" H 5150 2450 50  0000 C CNN
+F 2 "" H 5100 2250 50  0001 C CNN
+F 3 "" H 5100 2250 50  0001 C CNN
+	1    5100 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L taobao-r:R103 R2
+U 1 1 5BC6282D
+P 4700 2150
+F 0 "R2" H 4800 2200 50  0000 L CNN
+F 1 "R103" H 4800 2150 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4700 2150 50  0001 C CNN
+F 3 "~" H 4700 2150 50  0001 C CNN
+	1    4700 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 2250 4700 2300
+Wire Wire Line
+	4700 2300 5100 2300
+Wire Wire Line
+	5100 2300 5100 2250
+Wire Wire Line
+	3850 1950 4700 1950
+Wire Wire Line
+	4700 1950 4700 2050
+Connection ~ 4700 1950
+Wire Wire Line
+	4700 1950 5750 1950
+Text Notes 3000 2350 2    100  ~ 0
+PMS5003S terminals\n\nVCC\nGND\nSET\nRXD\nTXD\nRESET\nNC\nNC
+Text Notes 6600 2150 0    100  ~ 0
+MCU_TERMINALS\n\nVCC\nGND\nSET_CONTROL\nTXD\nRXD\nRESET_CONTROL
+Text Label 4250 1450 2    50   ~ 0
+SEN_VCC
+Text Label 4250 1650 2    50   ~ 0
+SEN_SET
+Text Label 4250 1750 2    50   ~ 0
+SEN_RXD
+Text Label 4250 1850 2    50   ~ 0
+SEN_TXD
+Text Label 4250 1950 2    50   ~ 0
+SEN_RESET
+Text Label 5350 1450 0    50   ~ 0
+MCU_VCC
+$Comp
+L taobao-components:USB_PCB U1
+U 1 1 5BC627DA
+P 2650 3600
+F 0 "U1" H 2600 3200 50  0000 C CNN
+F 1 "USB_PCB" H 2600 3300 50  0000 C CNN
+F 2 "footprint-lib.pretty:usb-PCB" H 2650 3650 50  0001 C CNN
+F 3 "" H 2650 3650 50  0001 C CNN
+	1    2650 3600
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
